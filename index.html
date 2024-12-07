@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能AI聊天助手</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- 登录部分 -->
+    <div id="login-section">
+      <h2>请输入智能AI房间号</h2>
+      <input id="room-input" type="text" placeholder="房间号">
+      <button id="enter-btn">进入AI聊天</button>
+    </div>
+
+    <!-- 聊天部分 -->
+    <div id="chat-section" style="display: none;">
+      <h3 id="room-title">智能AI聊天房间</h3>
+      <div id="chat-box"></div>
+      <input id="message-input" type="text" placeholder="输入您的问题或消息">
+      <button id="send-btn">发送</button>
+    </div>
+
+    <!-- reCAPTCHA 验证 -->
+    <div id="recaptcha-container" style="display: none;">
+      <h4>请完成验证码以显示聊天记录</h4>
+      <div class="g-recaptcha" data-sitekey="FBPUUOPHYGVX6KSC" data-callback="onRecaptchaSuccess"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
